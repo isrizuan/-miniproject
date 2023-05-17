@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Student KKPG Record</title>
+   <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
+}
+
+form {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  font-size: 16px;
+  color: #333333;
+  outline: none;
+}
+
+input[type="submit"],
+button {
+  width: 100%;
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #555555;
+}
+
+.error {
+  color: #FF0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Add Student Record</h1>
+
+  <div>
+    <form method="POST" action="addstudent.php">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required><br>
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email" required><br>
+      <label for="age">Age:</label>
+      <input type="text" name="age" id="age" required><br>
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" id="male" value="Male" required>Male
+      <input type="radio" name="gender" id="female" value="Female" required>Female
+      <input type="radio" name="gender" id="other" value="Other" required>Other<br>
+      <input type="submit" value="Add Record">
+    </form>
+
+    <button type="button" onclick="window.location.href='update.php';">Update Record</button><br>
+    <button type="button" onclick="window.location.href='delete.html';">Delete Record</button><br>
+    <button type="button" onclick="window.location.href='search.php';">Search Record</button><br>
+    <button type="button" onclick="window.location.href='retrievedata.php';">Record List</button>
+  </div>
+</body>
+</html>
+
